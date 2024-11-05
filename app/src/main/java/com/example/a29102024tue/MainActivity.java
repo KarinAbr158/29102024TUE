@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Toast.makeText(MainActivity.this, "Opening new activity", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
                 startActivity(i);
             }
