@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -27,21 +28,14 @@ public class MainActivity extends AppCompatActivity {
         });
 
         TextView text = findViewById(R.id.txt);
-        Button btn = findViewById(R.id.Button1);
-        text.setText("Welcome!");
+        EditText n = findViewById(R.id.editText);
+        Button btn = findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                text.setText("Karin");
-            }
-        });
-        Button btn2 = findViewById(R.id.button2);
-        btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Opening new activity", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                getIntent().putExtra("age", "45");
+                getIntent().putExtra("name", "n");
                 startActivity(i);
             }
         });

@@ -24,8 +24,8 @@ public class MainActivity2 extends AppCompatActivity {
             return insets;
         });
         Intent i = getIntent();
-        if(i != null){
-            String age = i.getStringExtra("45");
+        if(i == null){
+            String age = i.getStringExtra("kill yourself");
         }
         Button finito = findViewById(R.id.finishBtn);
         finito.setOnClickListener(new View.OnClickListener() {
