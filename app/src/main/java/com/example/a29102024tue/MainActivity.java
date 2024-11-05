@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Opening new activity", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                getIntent().putExtra("age", "45");
                 startActivity(i);
             }
         });
