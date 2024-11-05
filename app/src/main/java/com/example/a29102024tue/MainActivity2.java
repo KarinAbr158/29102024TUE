@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,9 +25,11 @@ public class MainActivity2 extends AppCompatActivity {
             return insets;
         });
         Intent i = getIntent();
-        if(i == null){
-            String age = i.getStringExtra("kill yourself");
+        if(i != null){
+            String name = i.getStringExtra("name");
         }
+        TextView text = findViewById(R.id.text2);
+        text.setText(i.getStringExtra("name"));
         Button finito = findViewById(R.id.finishBtn);
         finito.setOnClickListener(new View.OnClickListener() {
             @Override
