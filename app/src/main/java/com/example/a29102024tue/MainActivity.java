@@ -27,16 +27,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        //TextView text = findViewById(R.id.txt);
+        TextView text = findViewById(R.id.txt);
         EditText name = findViewById(R.id.editText);
-        String nameString = String.valueOf(name.getText());
+        String nameString = name.getText().toString();
         Button btn = findViewById(R.id.button2);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Opening new activity", Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                getIntent().putExtra("name", nameString);
+                i.putExtra("name", nameString);
                 startActivity(i);
             }
         });

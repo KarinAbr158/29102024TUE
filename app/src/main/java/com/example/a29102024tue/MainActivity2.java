@@ -24,12 +24,10 @@ public class MainActivity2 extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        Intent i = getIntent();
-        if(i != null){
-            String name = i.getStringExtra("name");
-        }
         TextView text = findViewById(R.id.text2);
-        text.setText(i.getStringExtra("name"));
+        Intent i = getIntent();
+        String getName = i.getStringExtra("name");
+        text.setText(getName);
         Button finito = findViewById(R.id.finishBtn);
         finito.setOnClickListener(new View.OnClickListener() {
             @Override
